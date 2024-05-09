@@ -15,3 +15,16 @@ signupLink.onclick = (() => {
     signupBtn.click();
     return false;
 });
+
+document.getElementById('loginform').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let useremail = document.getElementById('emailuser').value;
+    let password = document.getElementById('passuser').value;
+
+    if (useremail === 'chetan' && password === 'javascript') {
+        document.getElementById('loginStatus').textContent = 'Login successful!';
+    } else {
+        document.getElementById('loginStatus').textContent = 'Invalid username or password';
+    }
+});
